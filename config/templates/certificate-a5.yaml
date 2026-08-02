@@ -1,0 +1,25 @@
+code: CERTIFICATE_A5_V1
+jrxml: certificate-a5.jrxml
+defaultOutputName: certificate
+parameters:
+  CERTIFICATE_NO:
+    path: certificateNo
+    type: string
+  FULL_NAME:
+    path: student.fullName
+    type: string
+  DOB:
+    path: student.dateOfBirth
+    type: date
+    format: dd/MM/yyyy
+  ORGANIZATION:
+    path: student.organization
+    type: string
+  PHOTO:
+    path: student.photo
+    type: image
+  QR_IMAGE:
+    path: verificationUrl
+    type: qr
+    width: 300
+    height: 300

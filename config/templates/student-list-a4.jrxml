@@ -1,0 +1,31 @@
+<jasperReport name="student_list_a4" pageWidth="595" pageHeight="842" columnWidth="535"
+              leftMargin="30" rightMargin="30" topMargin="30" bottomMargin="30">
+    <style name="Default" default="true" fontName="Noto Sans"/>
+    <parameter name="COURSE_NAME" class="java.lang.String"/>
+    <field name="fullName" class="java.lang.String"/>
+    <field name="certificateNo" class="java.lang.String"/>
+    <title height="65">
+        <element kind="textField" x="0" y="0" width="535" height="30"
+                 hTextAlign="Center" fontName="Noto Sans" fontSize="16" bold="true">
+            <expression><![CDATA["DANH SÁCH HỌC VIÊN - " + $P{COURSE_NAME}]]></expression>
+        </element>
+    </title>
+    <columnHeader height="25">
+        <element kind="staticText" x="0" y="0" width="350" height="25">
+            <text><![CDATA[Họ và tên]]></text>
+        </element>
+        <element kind="staticText" x="350" y="0" width="185" height="25">
+            <text><![CDATA[Số chứng nhận]]></text>
+        </element>
+    </columnHeader>
+    <detail>
+        <band height="24">
+            <element kind="textField" x="0" y="0" width="350" height="24">
+                <expression><![CDATA[$F{fullName}]]></expression>
+            </element>
+            <element kind="textField" x="350" y="0" width="185" height="24">
+                <expression><![CDATA[$F{certificateNo}]]></expression>
+            </element>
+        </band>
+    </detail>
+</jasperReport>

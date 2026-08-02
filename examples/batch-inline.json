@@ -1,0 +1,29 @@
+[
+  {
+    "id": "cert-001",
+    "template": "CERTIFICATE_A5_V1",
+    "outputName": "certificate-nguyen-van-an",
+    "data": {
+      "certificateNo": "AT-2026-0001",
+      "student": {
+        "fullName": "NGUYỄN VĂN AN",
+        "dateOfBirth": "1995-08-15",
+        "organization": "Công ty TNHH Công nghệ ABC",
+        "photo": "examples/photo-placeholder.png"
+      },
+      "verificationUrl": "https://example.vn/verify/AT-2026-0001"
+    }
+  },
+  {
+    "id": "list-001",
+    "template": "STUDENT_LIST_A4_V1",
+    "outputName": "student-list-course-001",
+    "data": {
+      "course": {"name": "AN TOÀN, VỆ SINH LAO ĐỘNG"},
+      "students": [
+        {"fullName": "NGUYỄN VĂN AN", "certificateNo": "AT-2026-0001"},
+        {"fullName": "TRẦN THỊ BÌNH", "certificateNo": "AT-2026-0002"}
+      ]
+    }
+  }
+]

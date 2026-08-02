@@ -36,12 +36,32 @@ public final class PdfSigner {
             String tsaUrl,
             Path truststore,
             char[] truststorePassword,
-            boolean online
+            boolean online,
+            VisualSignatureOptions visualSignature
+    ) throws Exception {
+        sign(input, output, keystore, password, alias, levelName, tsaUrl,
+                truststore, truststorePassword, online, visualSignature, false);
+    }
+
+    public void sign(
+            Path input,
+            Path output,
+            Path keystore,
+            char[] password,
+            String alias,
+            String levelName,
+            String tsaUrl,
+            Path truststore,
+            char[] truststorePassword,
+            boolean online,
+            VisualSignatureOptions visualSignature,
+            boolean force
     ) throws Exception {
         requireRegularFile(input, "Input PDF");
         requireRegularFile(keystore, "Signing keystore");
-        if (Files.exists(output)) {
-            throw new IllegalArgumentException("Refusing to overwrite existing output: " + output);
+        if (Files.exists(output) && !force) {
+            throw new IllegalArgumentException("Refusing to overwrite existing output: " + output
+                    + " (use --force to replace it)");
         }
 
         SignatureLevel level = parseLevel(levelName);
@@ -71,6 +91,7 @@ public final class PdfSigner {
             parameters.setSigningCertificate(key.getCertificate());
             parameters.setCertificateChain(key.getCertificateChain());
             parameters.bLevel().setSigningDate(new java.util.Date());
+            VisualSignatureSupport.apply(parameters, key, visualSignature);
 
             ToBeSigned dataToSign = service.getDataToSign(document, parameters);
             SignatureValue signatureValue =

@@ -15,4 +15,6 @@
 /Users/win/Mine/Work/003Others/jasper-cli-batch/src/main/java/vn/trace/reportcli/sign/PdfSigner.java
 /Users/win/Mine/Work/003Others/jasper-cli-batch/src/main/java/vn/trace/reportcli/sign/PdfVerifier.java
 /Users/win/Mine/Work/003Others/jasper-cli-batch/src/main/java/vn/trace/reportcli/sign/SelfSignedKeyGenerator.java
+/Users/win/Mine/Work/003Others/jasper-cli-batch/src/main/java/vn/trace/reportcli/sign/VisualSignatureOptions.java
+/Users/win/Mine/Work/003Others/jasper-cli-batch/src/main/java/vn/trace/reportcli/sign/VisualSignatureSupport.java
 /Users/win/Mine/Work/003Others/jasper-cli-batch/src/main/java/vn/trace/reportcli/util/JsonSupport.java

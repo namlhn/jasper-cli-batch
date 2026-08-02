@@ -31,7 +31,7 @@ class PdfSignVerifyRoundTripTest {
                 key, PASSWORD, "signer", "CN=Test PDF Signer", Duration.ofDays(30), 2048);
         new PdfSigner().sign(
                 input, signed, key, PASSWORD, "signer", "B", null,
-                null, null, false);
+                null, null, false, VisualSignatureOptions.disabled());
 
         PdfVerifier.VerificationResult trusted =
                 new PdfVerifier().verify(signed, key, PASSWORD, false);
@@ -53,7 +53,7 @@ class PdfSignVerifyRoundTripTest {
 
         assertThrows(Exception.class, () -> new PdfSigner().sign(
                 input, tempDir.resolve("signed.pdf"), key, "wrong".toCharArray(), null,
-                "B", null, null, null, false));
+                "B", null, null, null, false, VisualSignatureOptions.disabled()));
     }
 
     @Test
@@ -65,7 +65,7 @@ class PdfSignVerifyRoundTripTest {
                 key, PASSWORD, "signer", "CN=Test PDF Signer", Duration.ofDays(30), 2048);
         new PdfSigner().sign(
                 input, signed, key, PASSWORD, null, "B", null,
-                null, null, false);
+                null, null, false, VisualSignatureOptions.disabled());
 
         byte[] bytes = Files.readAllBytes(signed);
         bytes[bytes.length / 3] ^= 1;
@@ -77,6 +77,43 @@ class PdfSignVerifyRoundTripTest {
         } catch (RuntimeException expectedForStructurallyBrokenPdf) {
             assertTrue(expectedForStructurallyBrokenPdf.getMessage() != null);
         }
+    }
+
+    @Test
+    void signsVisibleSignatureWithVietnameseText(@TempDir Path tempDir) throws Exception {
+        Path input = renderPdf(tempDir);
+        Path key = tempDir.resolve("signer.p12");
+        Path signed = tempDir.resolve("signed-vi.pdf");
+        new SelfSignedKeyGenerator().generate(
+                key, PASSWORD, "signer", "CN=Nguyễn Văn A", Duration.ofDays(30), 2048);
+
+        VisualSignatureOptions visible = new VisualSignatureOptions(
+                true, 1, 12f, 12f, 180f, 42f, "Đã ký bởi STP", null, true, 8f);
+        new PdfSigner().sign(
+                input, signed, key, PASSWORD, "signer", "B", null,
+                null, null, false, visible);
+
+        assertTrue(new PdfVerifier().verify(signed, key, PASSWORD, false).valid());
+    }
+
+    @Test
+    void signsWithVisibleRepresentation(@TempDir Path tempDir) throws Exception {
+        Path input = renderPdf(tempDir);
+        Path key = tempDir.resolve("signer.p12");
+        Path signed = tempDir.resolve("signed-visible.pdf");
+        new SelfSignedKeyGenerator().generate(
+                key, PASSWORD, "signer", "CN=Visible Signer", Duration.ofDays(30), 2048);
+
+        VisualSignatureOptions visible = new VisualSignatureOptions(
+                true, 1, 12f, 12f, 180f, 42f, "Signed for testing", null, true, 8f);
+        new PdfSigner().sign(
+                input, signed, key, PASSWORD, "signer", "B", null,
+                null, null, false, visible);
+
+        PdfVerifier.VerificationResult result =
+                new PdfVerifier().verify(signed, key, PASSWORD, false);
+        assertTrue(result.valid(), result.summary());
+        assertTrue(result.summary().contains("Visible Signer"), result.summary());
     }
 
     private static Path renderPdf(Path tempDir) throws Exception {

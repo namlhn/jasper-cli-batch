@@ -2,6 +2,7 @@ vn/trace/reportcli/render/JasperBatchRenderer$RenderResult.class
 vn/trace/reportcli/sign/PdfSigner.class
 vn/trace/reportcli/cli/CliPasswords.class
 vn/trace/reportcli/model/BatchJob.class
+vn/trace/reportcli/sign/VisualSignatureOptions.class
 vn/trace/reportcli/sign/PdfVerifier.class
 vn/trace/reportcli/cli/RenderCommand.class
 vn/trace/reportcli/render/ValueResolver.class
@@ -15,6 +16,7 @@ vn/trace/reportcli/cli/GenerateKeyCommand.class
 vn/trace/reportcli/cli/SignCommand.class
 vn/trace/reportcli/render/TemplateRegistry.class
 vn/trace/reportcli/cli/JasperCliCommand.class
+vn/trace/reportcli/sign/VisualSignatureSupport.class
 vn/trace/reportcli/render/JasperBatchRenderer.class
 vn/trace/reportcli/Main.class
 vn/trace/reportcli/sign/PdfVerifier$VerificationResult.class

@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: vn.trace.reportcli.cli.CliCompatibilityTest
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.122 s -- in vn.trace.reportcli.cli.CliCompatibilityTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.356 s -- in vn.trace.reportcli.cli.CliCompatibilityTest

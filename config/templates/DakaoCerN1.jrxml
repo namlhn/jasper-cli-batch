@@ -12,6 +12,7 @@
 	<parameter name="Position" class="java.lang.String"/>
 	<parameter name="TrainingGroup" class="java.lang.String"/>
 	<parameter name="Company" class="java.lang.String"/>
+	<parameter name="AvatarPath" class="java.lang.String"/>
 	<queryString>
 		<![CDATA[]]>
 	</queryString>
@@ -86,16 +87,23 @@
 				<textFieldExpression><![CDATA[$P{TrainingGroup}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="StretchHeight">
-				<reportElement x="40" y="256" width="316" height="34" uuid="8c3cd4df-d711-4ac7-ba88-55420632f5da">
+				<reportElement x="50" y="256" width="310" height="34" uuid="8c3cd4df-d711-4ac7-ba88-55420632f5da">
 					<property name="com.jaspersoft.studio.unit.leftIndent" value="cm"/>
 					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
 				</reportElement>
 				<textElement>
 					<font fontName="Times New Roman"/>
-					<paragraph lineSpacing="Double" firstLineIndent="150"/>
+					<paragraph lineSpacing="Double" firstLineIndent="136"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{Company}]]></textFieldExpression>
 			</textField>
+			<image scaleImage="FillFrame">
+				<reportElement x="54" y="45" width="63" height="85" uuid="b3a9036b-c233-4f15-8748-0e1b5125ffbb">
+					<property name="com.jaspersoft.studio.unit.width" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+				</reportElement>
+				<imageExpression><![CDATA[$P{AvatarPath}]]></imageExpression>
+			</image>
 		</band>
 	</detail>
 </jasperReport>

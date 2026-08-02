@@ -3,6 +3,9 @@ package vn.trace.reportcli.render;
 import net.sf.jasperreports.engine.JRException;
 import net.sf.jasperreports.engine.JasperCompileManager;
 import net.sf.jasperreports.engine.JasperReport;
+import net.sf.jasperreports.engine.fill.JasperReportSource;
+import net.sf.jasperreports.engine.fill.SimpleJasperReportSource;
+import net.sf.jasperreports.repo.SimpleRepositoryResourceContext;
 import vn.trace.reportcli.config.ReportDefinition;
 import vn.trace.reportcli.util.JsonSupport;
 
@@ -49,12 +52,28 @@ public final class TemplateRegistry {
         }
     }
 
+    public Path configDir() {
+        return configDir;
+    }
+
     public ReportDefinition definition(String code) {
         ReportDefinition definition = definitions.get(code);
         if (definition == null) {
             throw new IllegalArgumentException("Unknown template code: " + code + ". Available: " + definitions.keySet());
         }
         return definition;
+    }
+
+    public synchronized JasperReportSource reportSource(String code) throws IOException, JRException {
+        ReportDefinition definition = definition(code);
+        Path jrxmlPath = configDir.resolve(definition.jrxml()).normalize();
+        if (!jrxmlPath.startsWith(configDir)) {
+            throw new IOException("JRXML path escapes config directory: " + definition.jrxml());
+        }
+        return SimpleJasperReportSource.from(
+                compiled(code),
+                jrxmlPath.toString(),
+                SimpleRepositoryResourceContext.of(jrxmlPath.getParent().toString()));
     }
 
     public synchronized JasperReport compiled(String code) throws IOException, JRException {

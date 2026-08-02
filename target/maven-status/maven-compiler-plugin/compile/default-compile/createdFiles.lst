@@ -1,0 +1,12 @@
+vn/trace/reportcli/render/JasperBatchRenderer$RenderResult.class
+vn/trace/reportcli/model/BatchJob.class
+vn/trace/reportcli/render/TemplateRegistry$TemplateLoadRuntimeException.class
+vn/trace/reportcli/cli/RenderCommand.class
+vn/trace/reportcli/render/ValueResolver.class
+vn/trace/reportcli/config/ReportDefinition.class
+vn/trace/reportcli/cli/RenderCommand$1.class
+vn/trace/reportcli/util/JsonSupport.class
+vn/trace/reportcli/render/TemplateRegistry.class
+vn/trace/reportcli/render/JasperBatchRenderer.class
+vn/trace/reportcli/Main.class
+vn/trace/reportcli/config/ValueSpec.class

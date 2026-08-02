@@ -26,7 +26,7 @@ class JasperBatchRendererTest {
                 PROJECT_ROOT.resolve("examples/batch-inline.json").toFile(),
                 new TypeReference<>() {});
         TemplateRegistry registry = new TemplateRegistry(PROJECT_ROOT.resolve("config/templates"));
-        JasperBatchRenderer renderer = new JasperBatchRenderer(registry, PROJECT_ROOT);
+        JasperBatchRenderer renderer = new JasperBatchRenderer(registry, PROJECT_ROOT.resolve("config/templates"));
         List<JasperBatchRenderer.RenderResult> results = new ArrayList<>();
 
         for (BatchJob job : jobs) {
@@ -46,8 +46,8 @@ class JasperBatchRendererTest {
         TemplateRegistry registry = new TemplateRegistry(PROJECT_ROOT.resolve("config/templates"));
 
         assertSame(
-                registry.compiled("CERTIFICATE_A5_V1"),
-                registry.compiled("CERTIFICATE_A5_V1"));
+                registry.compiled("DakaoCerN1"),
+                registry.compiled("DakaoCerN1"));
     }
 
     @Test

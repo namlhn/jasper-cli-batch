@@ -1,8 +1,0 @@
-code: STUDENT_LIST_A4_V1
-jrxml: student-list-a4.jrxml
-defaultOutputName: student-list
-recordsPath: students
-parameters:
-  COURSE_NAME:
-    path: course.name
-    type: string

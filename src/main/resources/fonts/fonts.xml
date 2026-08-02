@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <fontFamilies>
+    <fontFamily name="Times New Roman">
+        <normal>fonts/TimesNewRoman-Regular.ttf</normal>
+        <bold>fonts/TimesNewRoman-Bold.ttf</bold>
+        <italic>fonts/TimesNewRoman-Italic.ttf</italic>
+        <boldItalic>fonts/TimesNewRoman-BoldItalic.ttf</boldItalic>
+        <pdfEncoding>Identity-H</pdfEncoding>
+        <pdfEmbedded>true</pdfEmbedded>
+    </fontFamily>
     <fontFamily name="Noto Sans">
         <normal>fonts/NotoSans-Regular.ttf</normal>
         <bold>fonts/NotoSans-Bold.ttf</bold>

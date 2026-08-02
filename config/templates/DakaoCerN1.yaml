@@ -1,0 +1,31 @@
+code: DakaoCerN1
+jrxml: DakaoCerN1.jrxml
+defaultOutputName: dakao-certificate
+parameters:
+  CerNo:
+    path: cerNo
+    type: string
+  FullName:
+    path: fullName
+    type: string
+  Gender:
+    path: gender
+    type: string
+  Birthday:
+    path: birthday
+    type: string
+  Nationality:
+    path: nationality
+    type: string
+  IdentityCard:
+    path: identityCard
+    type: string
+  Position:
+    path: position
+    type: string
+  TrainingGroup:
+    path: trainingGroup
+    type: string
+  Company:
+    path: company
+    type: string

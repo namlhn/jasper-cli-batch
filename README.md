@@ -32,8 +32,7 @@ Kết quả:
 target/jasper-cli.jar
 ```
 
-JasperReports 7 không tương thích nhị phân với các file `.jasper` cũ. Nên giữ source `.jrxml` và compile bằng cùng phiên bản lúc build hoặc runtime.
-Các file JRXML phải dùng cú pháp JasperReports 7; có thể chuyển đổi bằng chức năng **Update JasperReports files** của Jaspersoft Studio 7.
+Project dùng **JasperReports 6.21.5** — tương thích với mẫu thiết kế bằng Jaspersoft Studio 6.x. Nên giữ source `.jrxml` và compile bằng cùng phiên bản lúc build hoặc runtime.
 
 ## Chạy dữ liệu inline
 
@@ -43,7 +42,7 @@ Từ thư mục project:
 java -jar target/jasper-cli.jar \
   --input examples/batch-inline.json \
   --templates config/templates \
-  --assets . \
+  --assets config/templates \
   --output output \
   --merge output/all-reports.pdf
 ```

@@ -4,7 +4,8 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.JsonNodeFactory;
 import net.sf.jasperreports.engine.*;
 import net.sf.jasperreports.engine.data.JRMapCollectionDataSource;
-import net.sf.jasperreports.pdf.JRPdfExporter;
+import net.sf.jasperreports.engine.export.JRPdfExporter;
+import net.sf.jasperreports.engine.fill.JRFiller;
 import net.sf.jasperreports.export.SimpleExporterInput;
 import net.sf.jasperreports.export.SimpleOutputStreamExporterOutput;
 import vn.trace.reportcli.config.ReportDefinition;
@@ -35,8 +36,11 @@ public final class JasperBatchRenderer {
         }
 
         JRDataSource dataSource = buildDataSource(data, definition.recordsPath());
-        JasperPrint print = JasperFillManager.fillReport(
-                templates.compiled(job.template()), parameters, dataSource);
+        JasperPrint print = JRFiller.fill(
+                DefaultJasperReportsContext.getInstance(),
+                templates.reportSource(job.template()),
+                parameters,
+                dataSource);
 
         String name = firstNonBlank(job.outputName(), definition.defaultOutputName(), job.id(), job.template()) + ".pdf";
         return new RenderResult(name, print);

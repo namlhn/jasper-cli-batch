@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.5.final using JasperReports Library version 6.21.5-74d586df47b25dbd05bd0957999819196e59934a  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4_Landscape" pageWidth="765" pageHeight="538" orientation="Landscape" columnWidth="765" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="7250b405-970e-4af1-9a41-d2d622e15862">
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<parameter name="CerNo" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="FullName" class="java.lang.String"/>
+	<parameter name="Gender" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="Birthday" class="java.lang.String"/>
+	<parameter name="Nationality" class="java.lang.String"/>
+	<parameter name="IdentityCard" class="java.lang.String"/>
+	<parameter name="Position" class="java.lang.String"/>
+	<parameter name="TrainingGroup" class="java.lang.String"/>
+	<parameter name="Company" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="538" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+			<image>
+				<reportElement x="5" y="10" width="755" height="518" uuid="acec17b5-41fc-47eb-9856-0bf5fcfff37f"/>
+				<imageExpression><![CDATA["mauphieu.png"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="177" y="81" width="172" height="20" uuid="fe9cbbac-1fc1-4ec1-b662-9da893d93af2"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{CerNo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="190" y="132" width="170" height="13" uuid="22826b27-5ef8-4576-a457-f6f57e15739c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{FullName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="190" y="150" width="121" height="13" uuid="6eacb3fc-10ff-476f-9ffa-d8f3dd0da5e9">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Gender}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="189" y="169" width="170" height="13" uuid="32392d2d-a966-482e-86c8-1c9d78f0cbf8"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Birthday}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="189" y="185" width="170" height="13" uuid="7c3dd4b6-5070-4eec-8764-de17defd8eab"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Nationality}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="189" y="203" width="170" height="13" uuid="5d640914-7b40-4910-a926-c219b0270df6"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{IdentityCard}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="189" y="220" width="170" height="13" uuid="ed221443-5593-4d65-9116-1b081737318b"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Position}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="188" y="238" width="170" height="13" uuid="aef73778-c450-4d46-bf6a-2e61997d8e7f"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{TrainingGroup}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="40" y="256" width="316" height="34" uuid="8c3cd4df-d711-4ac7-ba88-55420632f5da">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman"/>
+					<paragraph lineSpacing="Double" firstLineIndent="150"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Company}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

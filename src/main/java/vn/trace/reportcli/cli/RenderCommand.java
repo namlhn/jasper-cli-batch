@@ -14,9 +14,8 @@ import java.util.List;
 import java.util.concurrent.Callable;
 
 @Command(
-        name = "jasper-cli",
+        name = "render",
         mixinStandardHelpOptions = true,
-        version = "1.0.0",
         description = "Render one or many JasperReports from inline JSON batch jobs."
 )
 public final class RenderCommand implements Callable<Integer> {

@@ -42,7 +42,7 @@ Từ thư mục project:
 java -jar target/jasper-cli.jar \
   --input examples/batch-inline.json \
   --templates config/templates \
-  --assets config/templates \
+  --assets . \
   --output output \
   --merge output/all-reports.pdf
 ```

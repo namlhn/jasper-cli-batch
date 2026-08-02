@@ -26,7 +26,7 @@ class JasperBatchRendererTest {
                 PROJECT_ROOT.resolve("examples/batch-inline.json").toFile(),
                 new TypeReference<>() {});
         TemplateRegistry registry = new TemplateRegistry(PROJECT_ROOT.resolve("config/templates"));
-        JasperBatchRenderer renderer = new JasperBatchRenderer(registry, PROJECT_ROOT.resolve("config/templates"));
+        JasperBatchRenderer renderer = new JasperBatchRenderer(registry, PROJECT_ROOT);
         List<JasperBatchRenderer.RenderResult> results = new ArrayList<>();
 
         for (BatchJob job : jobs) {

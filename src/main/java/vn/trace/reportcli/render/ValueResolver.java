@@ -44,6 +44,7 @@ public final class ValueResolver {
             case "double", "number" -> node.asDouble();
             case "boolean", "bool" -> node.asBoolean();
             case "date" -> formatDate(node.asText(), spec.format());
+            case "assetpath", "asset_path" -> resolveAssetPath(node.asText());
             case "image" -> loadImage(node.asText());
             case "qr" -> createQr(node.asText(), spec.width(), spec.height());
             default -> throw new IllegalArgumentException("Unsupported parameter type: " + spec.type());
@@ -69,6 +70,17 @@ public final class ValueResolver {
         } catch (Exception ignored) {
             return LocalDate.parse(raw).format(output);
         }
+    }
+
+    private String resolveAssetPath(String location) throws Exception {
+        Path path = assetRoot.resolve(location).normalize();
+        if (!path.startsWith(assetRoot)) {
+            throw new IllegalArgumentException("Path escapes asset root: " + location);
+        }
+        if (!Files.isRegularFile(path)) {
+            throw new IllegalArgumentException("Asset file not found: " + location);
+        }
+        return path.toString();
     }
 
     private BufferedImage createQr(String content, Integer width, Integer height) throws Exception {

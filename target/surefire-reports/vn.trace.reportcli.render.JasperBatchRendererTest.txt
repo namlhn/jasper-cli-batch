@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: vn.trace.reportcli.render.JasperBatchRendererTest
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.953 s -- in vn.trace.reportcli.render.JasperBatchRendererTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.643 s -- in vn.trace.reportcli.render.JasperBatchRendererTest

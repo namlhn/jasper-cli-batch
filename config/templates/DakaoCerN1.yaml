@@ -29,3 +29,6 @@ parameters:
   Company:
     path: company
     type: string
+  AvatarPath:
+    path: avatarPath
+    type: assetPath

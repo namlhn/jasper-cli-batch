@@ -12,7 +12,8 @@
       "identityCard": "079095001234",
       "position": "Kỹ sư an toàn",
       "trainingGroup": "Kỳ 15 - Tháng 01/2026",
-      "company": "Công ty TNHH Công nghệ ABC, 123 Nguyễn Huệ, Quận 1, TP. Hồ Chí Minh"
+      "company": "Công ty TNHH Công nghệ ABC, 123 Nguyễn Huệ, Quận 1, TP. Hồ Chí Minh",
+      "avatarPath": "examples/anhthe.jpg"
     }
   },
   {
@@ -28,7 +29,8 @@
       "identityCard": "001098012345",
       "position": "Nhân viên vận hành",
       "trainingGroup": "Kỳ 15 - Tháng 01/2026",
-      "company": "Công ty CP Sản xuất XYZ, KCN Bình Xuyên, Vĩnh Phúc"
+      "company": "Công ty CP Sản xuất XYZ, KCN Bình Xuyên, Vĩnh Phúc",
+      "avatarPath": "examples/anhthe.jpg"
     }
   }
 ]

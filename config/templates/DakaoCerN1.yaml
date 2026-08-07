@@ -32,3 +32,21 @@ parameters:
   AvatarPath:
     path: avatarPath
     type: assetPath
+  DateFrom:
+    path: dateFrom
+    type: string
+  DateTo:
+    path: dateTo
+    type: string
+  CerResult:
+    path: cerResult
+    type: string
+  NumYear:
+    path: numYear
+    type: string
+  ExpireFrom:
+    path: expireFrom
+    type: string
+  ExpireTo:
+    path: expireTo
+    type: string

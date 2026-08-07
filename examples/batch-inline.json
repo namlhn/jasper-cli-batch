@@ -13,7 +13,13 @@
       "position": "Kỹ sư an toàn",
       "trainingGroup": "Kỳ 15 - Tháng 01/2026",
       "company": "Công ty TNHH Công nghệ ABC, 123 Nguyễn Huệ, Quận 1, TP. Hồ Chí Minh",
-      "avatarPath": "examples/anhthe.jpg"
+      "avatarPath": "examples/anhthe.jpg",
+      "dateFrom": "10/01/2026",
+      "dateTo": "12/01/2026",
+      "cerResult": "Đạt",
+      "numYear": "2",
+      "expireFrom": "12/01/2026",
+      "expireTo": "12/01/2028"
     }
   },
   {
@@ -30,7 +36,13 @@
       "position": "Nhân viên vận hành",
       "trainingGroup": "Kỳ 15 - Tháng 01/2026",
       "company": "Công ty CP Sản xuất XYZ, KCN Bình Xuyên, Vĩnh Phúc",
-      "avatarPath": "examples/anhthe.jpg"
+      "avatarPath": "examples/anhthe.jpg",
+      "dateFrom": "10/01/2026",
+      "dateTo": "12/01/2026",
+      "cerResult": "Đạt",
+      "numYear": "2",
+      "expireFrom": "12/01/2026",
+      "expireTo": "12/01/2028"
     }
   }
 ]

@@ -13,6 +13,12 @@
 	<parameter name="TrainingGroup" class="java.lang.String"/>
 	<parameter name="Company" class="java.lang.String"/>
 	<parameter name="AvatarPath" class="java.lang.String"/>
+	<parameter name="DateFrom" class="java.lang.String"/>
+	<parameter name="DateTo" class="java.lang.String"/>
+	<parameter name="CerResult" class="java.lang.String"/>
+	<parameter name="NumYear" class="java.lang.String"/>
+	<parameter name="ExpireFrom" class="java.lang.String"/>
+	<parameter name="ExpireTo" class="java.lang.String"/>
 	<queryString>
 		<![CDATA[]]>
 	</queryString>
@@ -27,7 +33,7 @@
 				<imageExpression><![CDATA["mauphieu.png"]]></imageExpression>
 			</image>
 			<textField>
-				<reportElement x="177" y="86" width="172" height="20" uuid="fe9cbbac-1fc1-4ec1-b662-9da893d93af2"/>
+				<reportElement x="177" y="81" width="203" height="20" uuid="fe9cbbac-1fc1-4ec1-b662-9da893d93af2"/>
 				<textElement>
 					<font fontName="Times New Roman"/>
 				</textElement>
@@ -104,6 +110,48 @@
 				</reportElement>
 				<imageExpression><![CDATA[$P{AvatarPath}]]></imageExpression>
 			</image>
+			<textField>
+				<reportElement x="80" y="321" width="70" height="13" uuid="d10ee907-d7fb-45bc-a1a3-b615bea6e7b3"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{TrainingGroup}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="199" y="321" width="70" height="13" uuid="be78cbce-16e3-4c75-a1ef-eed680551e23"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{TrainingGroup}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="120" y="339" width="148" height="13" uuid="7e86feac-b17b-4937-a1bc-545db448b81f"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{TrainingGroup}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="159" y="360" width="26" height="13" uuid="3018c9e4-c50a-4cc6-be71-1873676797db"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{NumYear}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="80" y="374" width="70" height="13" uuid="5d4e1db4-1165-451c-a925-6af0a3cfc51c"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{ExpireFrom}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="197" y="374" width="70" height="13" uuid="38e05949-d383-4174-acaa-4d23d8e6fbfc"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{ExpireTo}]]></textFieldExpression>
+			</textField>
 		</band>
 	</detail>
 </jasperReport>

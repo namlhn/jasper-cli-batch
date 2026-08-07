@@ -115,7 +115,7 @@ public final class PdfSigner {
         List<DSSPrivateKeyEntry> keys = token.getKeys();
         if (keys.isEmpty()) throw new IllegalArgumentException("No private key found in " + keystore);
         if (alias == null || alias.isBlank()) {
-            if (keys.size() == 1) return keys.getFirst();
+            if (keys.size() == 1) return keys.get(0);
             throw new IllegalArgumentException(
                     "Keystore contains multiple private keys; select one with --alias");
         }

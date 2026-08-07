@@ -122,6 +122,6 @@ class PdfSignVerifyRoundTripTest {
                 new TypeReference<>() {});
         JasperBatchRenderer renderer = new JasperBatchRenderer(
                 new TemplateRegistry(PROJECT_ROOT.resolve("config/templates")), PROJECT_ROOT);
-        return renderer.exportSingle(renderer.render(jobs.getFirst()), tempDir.resolve("rendered"));
+        return renderer.exportSingle(renderer.render(jobs.get(0)), tempDir.resolve("rendered"));
     }
 }

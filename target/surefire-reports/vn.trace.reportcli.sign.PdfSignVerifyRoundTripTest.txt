@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: vn.trace.reportcli.sign.PdfSignVerifyRoundTripTest
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 13.30 s -- in vn.trace.reportcli.sign.PdfSignVerifyRoundTripTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.74 s -- in vn.trace.reportcli.sign.PdfSignVerifyRoundTripTest

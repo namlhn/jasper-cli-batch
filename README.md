@@ -1,6 +1,6 @@
 # Jasper CLI Batch
 
-CLI Java 21 gộp hai nhóm chức năng trong một fat JAR:
+CLI Java 17 gộp hai nhóm chức năng trong một fat JAR:
 
 1. **Render batch** — xuất một hoặc nhiều PDF từ mẫu JasperReports + JSON inline.
 2. **Ký số PAdES** — tạo khóa thử nghiệm, ký PDF (có/không khung hiển thị), xác minh chữ ký.
@@ -103,6 +103,8 @@ Mặc định lệnh `sign` vẽ khung chữ ký trên trang PDF:
 - **Căn chữ:** phải trong khung chữ ký.
 
 ## Build
+
+Yêu cầu **Java 17+** (build và runtime).
 
 ```bash
 mvn clean test package

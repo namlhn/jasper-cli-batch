@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.5.final using JasperReports Library version 6.21.5-74d586df47b25dbd05bd0957999819196e59934a  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4_Landscape" pageWidth="255" pageHeight="368" orientation="Landscape" columnWidth="255" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="7250b405-970e-4af1-9a41-d2d622e15862">
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<parameter name="CerNo" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="FullName" class="java.lang.String"/>
+	<parameter name="Gender" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="Birthday" class="java.lang.String"/>
+	<parameter name="Nationality" class="java.lang.String"/>
+	<parameter name="IdentityCard" class="java.lang.String"/>
+	<parameter name="Position" class="java.lang.String"/>
+	<parameter name="TrainingGroup" class="java.lang.String"/>
+	<parameter name="Company" class="java.lang.String"/>
+	<parameter name="AvatarPath" class="java.lang.String"/>
+	<parameter name="DateFrom" class="java.lang.String"/>
+	<parameter name="DateTo" class="java.lang.String"/>
+	<parameter name="CerResult" class="java.lang.String"/>
+	<parameter name="NumYear" class="java.lang.String"/>
+	<parameter name="ExpireFrom" class="java.lang.String"/>
+	<parameter name="ExpireTo" class="java.lang.String"/>
+	<parameter name="CerName" class="java.lang.String"/>
+	<parameter name="ExpireFromDay" class="java.lang.String"/>
+	<parameter name="ExpireFromMonth" class="java.lang.String"/>
+	<parameter name="ExpireFromYear" class="java.lang.String"/>
+	<parameter name="ExpireToDay" class="java.lang.String"/>
+	<parameter name="ExpireToMonth" class="java.lang.String"/>
+	<parameter name="ExpireToYear" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="368" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+			<image>
+				<reportElement x="0" y="0" width="255" height="368" uuid="6a2daa84-b336-49ab-92ce-b2b517f06692"/>
+				<imageExpression><![CDATA["maunhom3.png"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="86" y="166" width="145" height="8" uuid="fe9cbbac-1fc1-4ec1-b662-9da893d93af2">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman" size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{CerNo}]]></textFieldExpression>
+			</textField>
+			<image scaleImage="FillFrame">
+				<reportElement x="99" y="88" width="56" height="70" uuid="b3a9036b-c233-4f15-8748-0e1b5125ffbb">
+					<property name="com.jaspersoft.studio.unit.width" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+				</reportElement>
+				<imageExpression><![CDATA[$P{AvatarPath}]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="76" y="223" width="145" height="8" uuid="f49955ca-cce5-480a-82b2-2b32d7ecd008">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman" size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{FullName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="76" y="233" width="145" height="8" uuid="8e672b5f-f0a3-4664-a36b-18b99a88dc1b">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman" size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Birthday}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="75" y="243" width="145" height="8" uuid="5e7f2d2b-18ae-4151-846b-e9e4436d87fe">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman" size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Position}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="129" y="252" width="110" height="8" uuid="faf9baf1-d397-4615-bf8f-c85d3d8809dc">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman" size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{CerName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="73" y="262" width="158" height="8" uuid="a3828ecb-cf00-40a6-bffe-c05ead65ea72">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman" size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{TrainingGroup}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="86" y="272" width="34" height="8" uuid="3baf4324-4e30-4363-a692-38d5112ae612">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{ExpireFrom}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="142" y="272" width="29" height="8" uuid="73c51631-df5c-4eeb-bcf6-431f52aa6869">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{ExpireFromMonth}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="182" y="272" width="29" height="8" uuid="a629e598-805a-4d6a-a411-d66062518dd0">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman" size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{ExpireFromYear}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="130" y="341" width="12" height="8" uuid="481472ef-79d2-4cb0-969a-42fd34674d4c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{ExpireToDay}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="144" y="341" width="12" height="8" uuid="eaf84114-a8f0-4ce7-a434-de938ed92ee9">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{ExpireToDay}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="159" y="341" width="22" height="8" uuid="04de2d92-03a6-46d0-9648-9b553ea200e2">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman" size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{ExpireToYear}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

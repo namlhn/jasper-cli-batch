@@ -1,6 +1,6 @@
-code: DakaoCerN1
-jrxml: DakaoCerN1.jrxml
-defaultOutputName: dakao-certificate
+code: DakaoCerN3
+jrxml: DakaoCerN3.jrxml
+defaultOutputName: dakao-certificate-n3
 parameters:
   CerNo:
     path: cerNo

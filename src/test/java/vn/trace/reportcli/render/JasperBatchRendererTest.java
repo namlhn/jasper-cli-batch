@@ -60,6 +60,17 @@ class JasperBatchRendererTest {
         assertTrue(error.getMessage().contains("Unknown template code"));
     }
 
+    @Test
+    void certificateTemplateUsesCourseDatesAndResult() throws Exception {
+        String template = Files.readString(
+                PROJECT_ROOT.resolve("config/templates/DakaoCerN1.jrxml"));
+
+        assertTrue(template.contains("$P{DateFrom}"));
+        assertTrue(template.contains("$P{DateTo}"));
+        assertTrue(template.contains("$P{CerResult}"));
+        assertEquals(1, template.split("\\$P\\{TrainingGroup}", -1).length - 1);
+    }
+
     private static void assertPdf(Path path) throws Exception {
         assertTrue(Files.isRegularFile(path));
         byte[] bytes = Files.readAllBytes(path);

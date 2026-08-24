@@ -19,6 +19,13 @@
 	<parameter name="NumYear" class="java.lang.String"/>
 	<parameter name="ExpireFrom" class="java.lang.String"/>
 	<parameter name="ExpireTo" class="java.lang.String"/>
+	<parameter name="CerName" class="java.lang.String"/>
+	<parameter name="ExpireFromDay" class="java.lang.String"/>
+	<parameter name="ExpireFromMonth" class="java.lang.String"/>
+	<parameter name="ExpireFromYear" class="java.lang.String"/>
+	<parameter name="ExpireToDay" class="java.lang.String"/>
+	<parameter name="ExpireToMonth" class="java.lang.String"/>
+	<parameter name="ExpireToYear" class="java.lang.String"/>
 	<queryString>
 		<![CDATA[]]>
 	</queryString>
@@ -115,21 +122,21 @@
 				<textElement>
 					<font fontName="Times New Roman"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$P{TrainingGroup}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$P{DateFrom}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="199" y="321" width="70" height="13" uuid="be78cbce-16e3-4c75-a1ef-eed680551e23"/>
 				<textElement>
 					<font fontName="Times New Roman"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$P{TrainingGroup}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$P{DateTo}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="120" y="339" width="148" height="13" uuid="7e86feac-b17b-4937-a1bc-545db448b81f"/>
 				<textElement>
 					<font fontName="Times New Roman"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$P{TrainingGroup}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$P{CerResult}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="159" y="360" width="26" height="13" uuid="3018c9e4-c50a-4cc6-be71-1873676797db"/>
